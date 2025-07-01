@@ -94,3 +94,39 @@ body {
         height: 20px;
     }
 }
+/* الشريط السفلي */
+
+.copyright-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffffcc;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 8px #ffffff22;
+    z-index: 999;
+    animation: floatText 6s ease-in-out infinite;
+    white-space: nowrap;
+}
+
+
+/* حركة لطيفة للأعلى والأسفل */
+
+@keyframes floatText {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-4px);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
